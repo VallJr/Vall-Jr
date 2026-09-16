@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEW BRAND DAY — Spider Cashier</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] }
+        }
+      }
+    }
+  </script>
+
+<style>
+  :root{color-scheme:dark;}
+  body{background:#050913;color:#eaf2ff;min-height:100vh;}
+  body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-3;background:
+    radial-gradient(circle at 8% 8%,rgba(220,20,50,.24),transparent 22%),
+    radial-gradient(circle at 92% 12%,rgba(20,90,190,.22),transparent 24%),
+    radial-gradient(circle at 88% 92%,rgba(220,20,50,.13),transparent 22%),
+    linear-gradient(145deg,#03060d 0%,#07101d 48%,#04070d 100%);}
+  body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;opacity:.13;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,transparent,black 15%,black 85%,transparent);}
+  .max-w-7xl{position:relative;}
+  .max-w-7xl:before,.max-w-7xl:after{content:"";position:fixed;pointer-events:none;z-index:-1;}
+  .max-w-7xl:before{top:0;left:0;width:190px;height:190px;background:repeating-radial-gradient(circle at 0 0,transparent 0 22px,rgba(239,30,55,.22) 23px 24px,transparent 25px 42px);clip-path:polygon(0 0,100% 0,0 100%);}
+  .max-w-7xl:after{right:0;bottom:0;width:220px;height:220px;background:repeating-radial-gradient(circle at 100% 100%,transparent 0 24px,rgba(35,115,235,.20) 25px 26px,transparent 27px 46px);clip-path:polygon(100% 0,100% 100%,0 100%);}
+  header>div{background:linear-gradient(135deg,rgba(10,16,29,.96),rgba(9,20,38,.88)) !important;border:1px solid rgba(239,30,55,.35)!important;box-shadow:0 18px 50px rgba(0,0,0,.35),inset 0 1px rgba(255,255,255,.04)!important;}
+  header>div:after{content:"";position:absolute;right:-50px;top:-90px;width:250px;height:250px;border:2px solid rgba(35,115,235,.22);border-radius:50%;box-shadow:0 0 0 28px rgba(35,115,235,.05),0 0 0 58px rgba(35,115,235,.04);}
+  .grid > div.bg-white\/85,.grid > section.bg-white,.bg-white{background:rgba(12,20,34,.88)!important;color:#eaf2ff!important;border-color:rgba(111,141,180,.24)!important;box-shadow:0 14px 35px rgba(0,0,0,.24),inset 0 1px rgba(255,255,255,.035)!important;}
+  .bg-slate-50{background:rgba(4,10,19,.75)!important;color:#eaf2ff!important;}
+  .bg-emerald-50{background:rgba(6,78,59,.18)!important;}
+  .bg-red-50{background:rgba(127,29,29,.18)!important;}
+  .text-slate-800{color:#eaf2ff!important}.text-slate-700{color:#dbe7f7!important}.text-slate-600{color:#b6c6da!important}.text-slate-500{color:#8ea3bd!important}.text-slate-400{color:#72869f!important}.text-slate-300{color:#a9bad0!important}
+  input,select{background:#07111f!important;color:#eef6ff!important;border-color:#304158!important;}
+  input::placeholder{color:#71849c!important;}
+  select option{background:#07111f;color:#fff;}
+  .border-slate-200,.border-slate-200\/80{border-color:rgba(111,141,180,.24)!important;}
+  .bg-blue-600{background:#ef1838!important}.hover\:bg-blue-700:hover{background:#c9102c!important}
+  .bg-blue-100{background:rgba(29,78,216,.18)!important}.text-blue-700{color:#60a5fa!important}
+  .text-emerald-600,.text-emerald-700{color:#31e7a2!important}
+  .bg-emerald-600{background:#10b981!important}.hover\:bg-emerald-700:hover{background:#059669!important}
+  button{box-shadow:0 8px 20px rgba(0,0,0,.2)}
+  table{color:#dce8f7!important}.bg-slate-100{background:rgba(18,31,50,.9)!important}.bg-slate-200{background:rgba(30,45,67,.9)!important}
+  .rounded-2xl{border-radius:18px!important}.rounded-xl{border-radius:13px!important}
+  @media(max-width:768px){header>div{padding:1.25rem!important}.max-w-7xl:before,.max-w-7xl:after{opacity:.65}}
+</style>
+</head>
+<body class="font-sans relative overflow-x-hidden">
+  <!-- subtle corner accents -->
+  <div class="fixed -top-24 -left-24 w-64 h-64 rounded-full bg-red-600/10 blur-2xl pointer-events-none"></div>
+  <div class="fixed -bottom-28 -right-20 w-72 h-72 rounded-full bg-blue-700/10 blur-2xl pointer-events-none"></div>
+  <div class="fixed top-0 right-0 w-28 h-28 opacity-[0.07] pointer-events-none" style="background: repeating-linear-gradient(45deg, #111827 0 2px, transparent 2px 12px), repeating-linear-gradient(-45deg, #111827 0 2px, transparent 2px 12px); clip-path: polygon(100% 0, 0 0, 100% 100%);"></div>
+  <div class="fixed bottom-0 left-0 w-28 h-28 opacity-[0.07] pointer-events-none" style="background: repeating-linear-gradient(45deg, #111827 0 2px, transparent 2px 12px), repeating-linear-gradient(-45deg, #111827 0 2px, transparent 2px 12px); clip-path: polygon(0 100%, 0 0, 100% 100%);"></div>
+  <div class="max-w-7xl mx-auto px-4 py-6 relative">
+    <header class="mb-6">
+      <div class="bg-gradient-to-br from-slate-950 via-slate-900 to-[#111827] text-white rounded-2xl p-6 shadow-lg border border-slate-800 relative overflow-hidden">
+        <p class="text-sm tracking-[0.3em] uppercase text-red-400 font-semibold">NEW BRAND DAY</p>
+        <h1 class="text-3xl md:text-4xl font-black mt-1 tracking-tight">SPIDER <span class="text-red-500">CASHIER</span></h1>
+        <p class="text-slate-300 mt-2">Kasir, inventaris, transaksi, dan laporan toko dalam satu sistem.</p>
+      </div>
+    </header>
+
+    <!-- DASHBOARD -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+      <div class="bg-white/85 backdrop-blur rounded-2xl p-5 shadow-sm border border-slate-200/80">
+        <p class="text-sm text-slate-500">Modal Awal</p>
+        <p id="modalAwal" class="text-2xl font-bold mt-1">Rp0</p>
+        <p class="text-xs text-slate-400 mt-1">Σ stok awal × HPP</p>
+      </div>
+      <div class="bg-white/85 backdrop-blur rounded-2xl p-5 shadow-sm border border-slate-200/80">
+        <p class="text-sm text-slate-500">Total Keuntungan Bersih</p>
+        <p id="totalProfit" class="text-2xl font-bold mt-1 text-emerald-600">Rp0</p>
+        <p class="text-xs text-slate-400 mt-1">Penjualan − HPP barang terjual</p>
+      </div>
+      <div class="bg-white/85 backdrop-blur rounded-2xl p-5 shadow-sm border border-slate-200/80">
+        <p class="text-sm text-slate-500">Saldo Akhir Toko</p>
+        <p id="saldoAkhir" class="text-2xl font-bold mt-1">Rp0</p>
+        <p class="text-xs text-slate-400 mt-1">Modal awal + keuntungan bersih</p>
+      </div>
+    </section>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- KASIR -->
+      <section class="lg:col-span-1 bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-xl font-bold">🧾 Mesin Kasir</h2>
+          <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Real-time</span>
+        </div>
+
+        <label class="block text-sm font-medium mb-1">Produk</label>
+        <select id="productSelect" class="w-full border rounded-xl px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-400"></select>
+
+        <label class="block text-sm font-medium mb-1">Jumlah Beli</label>
+        <input id="qtyInput" type="number" min="1" value="1"
+          class="w-full border rounded-xl px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-400">
+
+        <div class="bg-slate-50 rounded-xl p-4 mb-4">
+          <div class="flex justify-between text-sm">
+            <span>Harga Satuan</span><span id="unitPrice">Rp0</span>
+          </div>
+          <div class="flex justify-between font-bold text-lg mt-2">
+            <span>Subtotal</span><span id="subtotal">Rp0</span>
+          </div>
+          <p id="stockInfo" class="text-xs text-slate-500 mt-2">Stok tersedia: 0</p>
+        </div>
+
+        <label class="block text-sm font-medium mb-1">Pembayaran Tunai</label>
+        <input id="paymentInput" type="number" min="0" placeholder="Masukkan uang pelanggan"
+          class="w-full border rounded-xl px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-400">
+
+        <div class="bg-emerald-50 rounded-xl p-4 mb-4">
+          <div class="flex justify-between">
+            <span class="font-medium">Kembalian</span>
+            <span id="changeAmount" class="font-bold text-emerald-700">Rp0</span>
+          </div>
+        </div>
+
+        <button id="sellBtn"
+          class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl transition">
+          Proses Penjualan
+        </button>
+        <p id="cashierMessage" class="text-sm mt-3 min-h-5"></p>
+      </section>
+
+      <!-- INVENTARIS -->
+      <section class="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h2 class="text-xl font-bold">📦 Modul Inventaris</h2>
+            <p class="text-sm text-slate-500">Stok berubah otomatis setiap transaksi berhasil.</p>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b text-left text-slate-500">
+                <th class="py-3 pr-3">Produk</th>
+                <th class="py-3 pr-3">Stok</th>
+                <th class="py-3 pr-3">HPP</th>
+                <th class="py-3 pr-3">Harga Jual</th>
+                <th class="py-3">Status</th>
+              </tr>
+            </thead>
+            <tbody id="inventoryBody"></tbody>
+          </table>
+        </div>
+
+        <div class="mt-6 border-t pt-5">
+          <h3 class="font-bold mb-3">➕ Tambah Produk Baru</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <input id="newName" type="text" placeholder="Nama produk"
+              class="border rounded-xl px-3 py-2">
+            <input id="newStock" type="number" min="0" placeholder="Stok awal"
+              class="border rounded-xl px-3 py-2">
+            <input id="newHpp" type="number" min="0" placeholder="HPP per unit"
+              class="border rounded-xl px-3 py-2">
+            <input id="newPrice" type="number" min="0" placeholder="Harga jual per unit"
+              class="border rounded-xl px-3 py-2">
+          </div>
+          <div id="productWarning" class="text-sm mt-3 min-h-5"></div>
+          <button id="addProductBtn"
+            class="mt-3 bg-slate-900 hover:bg-slate-800 text-white font-semibold py-2.5 px-5 rounded-xl">
+            Tambahkan Produk
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- RIWAYAT -->
+    <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 mt-6">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 class="text-xl font-bold">📋 Riwayat Transaksi</h2>
+          <p class="text-sm text-slate-500">Log hanya mencatat penjualan yang sukses.</p>
+        </div>
+        <button id="resetBtn" class="text-xs text-red-600 hover:underline">Reset Data Demo</button>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b text-left text-slate-500">
+              <th class="py-3 pr-3">Waktu</th>
+              <th class="py-3 pr-3">Produk</th>
+              <th class="py-3 pr-3">Jumlah</th>
+              <th class="py-3 pr-3">Total</th>
+              <th class="py-3">Keuntungan</th>
+            </tr>
+          </thead>
+          <tbody id="historyBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- BERPIKIR KOMPUTASIONAL -->
+    <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 mt-6">
+      <h2 class="text-xl font-bold mb-4">🧠 Alur Tahapan Berpikir Komputasional</h2>
+
+      <div class="space-y-5">
+        <div>
+          <h3 class="font-bold text-blue-700">1. Dekomposisi</h3>
+          <ul class="list-disc ml-6 mt-2 text-sm space-y-1">
+            <li>Modul inventaris: menyimpan produk, stok awal, HPP, dan harga jual.</li>
+            <li>Mesin kasir: memilih produk, jumlah beli, subtotal, pembayaran, dan kembalian.</li>
+            <li>Laporan finansial: menghitung modal awal, keuntungan bersih, dan saldo akhir.</li>
+            <li>Riwayat: mencatat transaksi yang berhasil.</li>
+            <li>Peringatan stok: menandai stok ≤ 5 unit.</li>
+            <li>Validasi produk: mencegah harga jual di bawah HPP.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-blue-700">2. Abstraksi</h3>
+          <p class="text-sm mt-2">Data utama yang diperlukan cukup direpresentasikan sebagai:</p>
+          <div class="bg-slate-50 rounded-xl p-3 mt-2 text-sm font-mono">
+            Produk = {nama, stok, stokAwal, hpp, hargaJual}<br>
+            Transaksi = {waktu, produk, jumlah, total, keuntungan}
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-blue-700">3. Pengenalan Pola</h3>
+          <ul class="list-disc ml-6 mt-2 text-sm space-y-1">
+            <li>Setiap penjualan selalu mengurangi stok.</li>
+            <li>Subtotal selalu = harga jual × jumlah.</li>
+            <li>Keuntungan transaksi = (harga jual − HPP) × jumlah.</li>
+            <li>Jika stok ≤ 5, produk perlu diberi peringatan.</li>
+            <li>Setiap transaksi sukses menambah saldo kas sebesar total pembayaran/penjualan.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-blue-700">4. Algoritma</h3>
+          <ol class="list-decimal ml-6 mt-2 text-sm space-y-1">
+            <li>Masukkan data produk: stok awal, HPP, dan harga jual.</li>
+            <li>Validasi harga jual ≥ HPP.</li>
+            <li>Pilih produk dan masukkan jumlah beli.</li>
+            <li>Hitung subtotal = harga jual × jumlah.</li>
+            <li>Pastikan jumlah beli tidak melebihi stok.</li>
+            <li>Masukkan pembayaran tunai dan pastikan pembayaran ≥ subtotal.</li>
+            <li>Kurangi stok sesuai jumlah yang terjual.</li>
+            <li>Hitung kembalian dan keuntungan transaksi.</li>
+            <li>Simpan transaksi ke riwayat.</li>
+            <li>Perbarui dashboard dan status stok secara otomatis.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-5">
+        <div>
+          <h3 class="font-bold mb-2">Flowchart (teks)</h3>
+          <pre class="bg-slate-900 text-slate-100 rounded-xl p-4 text-xs overflow-x-auto leading-6">[MULAI]
+   ↓
+[Input/Pilih Produk]
+   ↓
+[Input Jumlah Beli]
+   ↓
+[Hitung Subtotal = Harga × Jumlah]
+   ↓
+{Stok Cukup?}
+ ├─ TIDAK → [Tampilkan Peringatan] → [Selesai]
+ └─ YA
+      ↓
+[Input Pembayaran]
+      ↓
+{Pembayaran ≥ Subtotal?}
+ ├─ TIDAK → [Tampilkan Peringatan] → [Kembali ke Pembayaran]
+ └─ YA
+      ↓
+[Kurangi Stok]
+      ↓
+[Hitung Kembalian]
+      ↓
+[Hitung Keuntungan]
+      ↓
+[Simpan Riwayat Transaksi]
+      ↓
+[Update Dashboard & Stok]
+      ↓
+[SELESAI]</pre>
+        </div>
+
+        <div>
+          <h3 class="font-bold mb-2">Pseudocode</h3>
+          <pre class="bg-slate-900 text-slate-100 rounded-xl p-4 text-xs overflow-x-auto leading-6">START
+
+INPUT produk, stokAwal, HPP, hargaJual
+
+IF hargaJual &lt; HPP THEN
+    TAMPILKAN "Harga jual tidak boleh di bawah HPP"
+ELSE
+    SIMPAN produk
+END IF
+
+PILIH produk
+INPUT jumlah
+
+subtotal ← hargaJual × jumlah
+
+IF jumlah &gt; stok THEN
+    TAMPILKAN "Stok tidak cukup"
+ELSE
+    INPUT pembayaran
+
+    IF pembayaran &lt; subtotal THEN
+        TAMPILKAN "Uang pembayaran kurang"
+    ELSE
+        stok ← stok - jumlah
+        kembalian ← pembayaran - subtotal
+        keuntungan ← (hargaJual - HPP) × jumlah
+
+        SIMPAN transaksi
+        UPDATE modal, keuntungan, saldo, stok
+        TAMPILKAN kembalian
+    END IF
+END IF
+
+IF stok ≤ 5 THEN
+    TAMPILKAN "STOK MENIPIS"
+END IF
+
+END</pre>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center text-xs text-slate-500 py-6">
+      Sistem berjalan langsung di browser. Data disimpan di localStorage browser.
+    </footer>
+  </div>
+
+<script>
+"use strict";
+
+/* =========================
+   DATA & PENYIMPANAN
+========================= */
+const STORAGE_KEY = "kasir_inventaris_v1";
+
+const defaultData = {
+  products: [
+    { id: crypto.randomUUID(), name: "Nasi Kuning", stock: 20, initialStock: 20, hpp: 7000, price: 10000 },
+    { id: crypto.randomUUID(), name: "Es Teh", stock: 15, initialStock: 15, hpp: 2500, price: 5000 },
+    { id: crypto.randomUUID(), name: "Tempe Orek", stock: 10, initialStock: 10, hpp: 3000, price: 5000 }
+  ],
+  transactions: []
+};
+
+function loadData() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    return saved ? JSON.parse(saved) : defaultData;
+  } catch (error) {
+    console.error("Gagal membaca data:", error);
+    return defaultData;
+  }
+}
+
+let data = loadData();
+
+function saveData() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
+
+/* =========================
+   HELPER
+========================= */
+const $ = (id) => document.getElementById(id);
+
+function rupiah(value) {
+  return new Intl.NumberFormat("id-ID", {
+    style: "currency",
+    currency: "IDR",
+    maximumFractionDigits: 0
+  }).format(value || 0);
+}
+
+function escapeHTML(text) {
+  return String(text)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+function calculateModalAwal() {
+  return data.products.reduce(
+    (total, product) => total + (product.initialStock * product.hpp),
+    0
+  );
+}
+
+function calculateProfit() {
+  return data.transactions.reduce(
+    (total, trx) => total + trx.profit,
+    0
+  );
+}
+
+function updateDashboard() {
+  const modal = calculateModalAwal();
+  const profit = calculateProfit();
+  const saldo = modal + profit;
+
+  $("modalAwal").textContent = rupiah(modal);
+  $("totalProfit").textContent = rupiah(profit);
+  $("saldoAkhir").textContent = rupiah(saldo);
+}
+
+/* =========================
+   INVENTARIS
+========================= */
+function renderInventory() {
+  const body = $("inventoryBody");
+
+  if (data.products.length === 0) {
+    body.innerHTML = `
+      <tr><td colspan="5" class="py-6 text-center text-slate-400">
+        Belum ada produk.
+      </td></tr>`;
+    return;
+  }
+
+  body.innerHTML = data.products.map(product => {
+    const critical = product.stock <= 5;
+    const status = critical
+      ? `<span class="inline-flex items-center gap-1 bg-red-100 text-red-700 px-2 py-1 rounded-full text-xs font-semibold">⚠ Stok menipis</span>`
+      : `<span class="inline-flex bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full text-xs font-semibold">Aman</span>`;
+
+    return `
+      <tr class="${critical ? "bg-red-50" : ""} border-b last:border-0">
+        <td class="py-3 pr-3 font-medium">${escapeHTML(product.name)}</td>
+        <td class="py-3 pr-3 font-bold ${critical ? "text-red-600" : ""}">${product.stock}</td>
+        <td class="py-3 pr-3">${rupiah(product.hpp)}</td>
+        <td class="py-3 pr-3">${rupiah(product.price)}</td>
+        <td class="py-3">${status}</td>
+      </tr>
+    `;
+  }).join("");
+}
+
+/* =========================
+   KASIR
+========================= */
+function renderProductOptions() {
+  const select = $("productSelect");
+  const previous = select.value;
+
+  select.innerHTML = data.products.length
+    ? data.products.map(product =>
+        `<option value="${product.id}">${escapeHTML(product.name)} — stok ${product.stock}</option>`
+      ).join("")
+    : `<option value="">Tidak ada produk</option>`;
+
+  if (data.products.some(p => p.id === previous)) {
+    select.value = previous;
+  }
+
+  updateCashierPreview();
+}
+
+function getSelectedProduct() {
+  return data.products.find(product => product.id === $("productSelect").value);
+}
+
+function updateCashierPreview() {
+  const product = getSelectedProduct();
+  const qty = Math.max(1, Number($("qtyInput").value) || 1);
+
+  if (!product) {
+    $("unitPrice").textContent = rupiah(0);
+    $("subtotal").textContent = rupiah(0);
+    $("stockInfo").textContent = "Stok tersedia: 0";
+    $("changeAmount").textContent = rupiah(0);
+    return;
+  }
+
+  const subtotal = product.price * qty;
+  const payment = Number($("paymentInput").value) || 0;
+  const change = Math.max(0, payment - subtotal);
+
+  $("unitPrice").textContent = rupiah(product.price);
+  $("subtotal").textContent = rupiah(subtotal);
+  $("stockInfo").textContent = `Stok tersedia: ${product.stock}`;
+  $("changeAmount").textContent = rupiah(change);
+}
+
+function showCashierMessage(message, type = "error") {
+  const el = $("cashierMessage");
+  el.textContent = message;
+  el.className = `text-sm mt-3 min-h-5 ${
+    type === "success" ? "text-emerald-600" : "text-red-600"
+  }`;
+}
+
+function processSale() {
+  const product = getSelectedProduct();
+  const qty = Number($("qtyInput").value);
+  const payment = Number($("paymentInput").value);
+
+  if (!product) {
+    showCashierMessage("Pilih produk terlebih dahulu.");
+    return;
+  }
+
+  if (!Number.isInteger(qty) || qty <= 0) {
+    showCashierMessage("Jumlah beli harus berupa bilangan bulat lebih dari 0.");
+    return;
+  }
+
+  if (qty > product.stock) {
+    showCashierMessage(`Stok ${product.name} tidak cukup. Tersedia ${product.stock} unit.`);
+    return;
+  }
+
+  const subtotal = product.price * qty;
+
+  if (!Number.isFinite(payment) || payment < subtotal) {
+    showCashierMessage(`Pembayaran kurang. Minimal ${rupiah(subtotal)}.`);
+    return;
+  }
+
+  const profit = (product.price - product.hpp) * qty;
+  const change = payment - subtotal;
+
+  product.stock -= qty;
+
+  data.transactions.unshift({
+    id: crypto.randomUUID(),
+    time: new Date().toISOString(),
+    productId: product.id,
+    productName: product.name,
+    qty,
+    total: subtotal,
+    payment,
+    change,
+    profit
+  });
+
+  saveData();
+  renderAll();
+
+  $("paymentInput").value = "";
+  $("qtyInput").value = "1";
+  showCashierMessage(
+    `Penjualan berhasil. Kembalian: ${rupiah(change)}.`,
+    "success"
+  );
+}
+
+/* =========================
+   TAMBAH PRODUK
+========================= */
+function addProduct() {
+  const name = $("newName").value.trim();
+  const stock = Number($("newStock").value);
+  const hpp = Number($("newHpp").value);
+  const price = Number($("newPrice").value);
+  const warning = $("productWarning");
+
+  warning.textContent = "";
+  warning.className = "text-sm mt-3 min-h-5";
+
+  if (!name || !Number.isInteger(stock) || stock < 0 || !Number.isFinite(hpp) || hpp < 0 ||
+      !Number.isFinite(price) || price < 0) {
+    warning.textContent = "Lengkapi semua data dengan nilai yang valid.";
+    warning.classList.add("text-red-600");
+    return;
+  }
+
+  if (price < hpp) {
+    warning.textContent = `⚠ Anti-rugi: harga jual ${rupiah(price)} lebih rendah dari HPP ${rupiah(hpp)}.`;
+    warning.classList.add("text-red-600", "font-semibold");
+    return;
+  }
+
+  const duplicate = data.products.some(
+    product => product.name.toLowerCase() === name.toLowerCase()
+  );
+
+  if (duplicate) {
+    warning.textContent = "Produk dengan nama tersebut sudah ada.";
+    warning.classList.add("text-red-600");
+    return;
+  }
+
+  data.products.push({
+    id: crypto.randomUUID(),
+    name,
+    stock,
+    initialStock: stock,
+    hpp,
+    price
+  });
+
+  saveData();
+  renderAll();
+
+  $("newName").value = "";
+  $("newStock").value = "";
+  $("newHpp").value = "";
+  $("newPrice").value = "";
+
+  warning.textContent = "Produk berhasil ditambahkan.";
+  warning.classList.add("text-emerald-600");
+}
+
+/* =========================
+   RIWAYAT
+========================= */
+function renderHistory() {
+  const body = $("historyBody");
+
+  if (data.transactions.length === 0) {
+    body.innerHTML = `
+      <tr><td colspan="5" class="py-6 text-center text-slate-400">
+        Belum ada transaksi.
+      </td></tr>`;
+    return;
+  }
+
+  body.innerHTML = data.transactions.map(trx => {
+    const date = new Date(trx.time);
+    return `
+      <tr class="border-b last:border-0">
+        <td class="py-3 pr-3 whitespace-nowrap">${date.toLocaleString("id-ID")}</td>
+        <td class="py-3 pr-3 font-medium">${escapeHTML(trx.productName)}</td>
+        <td class="py-3 pr-3">${trx.qty}</td>
+        <td class="py-3 pr-3">${rupiah(trx.total)}</td>
+        <td class="py-3 text-emerald-600 font-semibold">${rupiah(trx.profit)}</td>
+      </tr>
+    `;
+  }).join("");
+}
+
+/* =========================
+   RENDER SEMUA
+========================= */
+function renderAll() {
+  updateDashboard();
+  renderInventory();
+  renderProductOptions();
+  renderHistory();
+  updateCashierPreview();
+}
+
+/* =========================
+   EVENT
+========================= */
+$("productSelect").addEventListener("change", updateCashierPreview);
+$("qtyInput").addEventListener("input", updateCashierPreview);
+$("paymentInput").addEventListener("input", updateCashierPreview);
+$("sellBtn").addEventListener("click", processSale);
+$("addProductBtn").addEventListener("click", addProduct);
+
+$("resetBtn").addEventListener("click", () => {
+  const confirmed = confirm("Reset semua produk dan transaksi ke data demo?");
+  if (!confirmed) return;
+
+  localStorage.removeItem(STORAGE_KEY);
+  data = loadData();
+  renderAll();
+  showCashierMessage("Data demo berhasil dipulihkan.", "success");
+});
+
+/* ENTER = tambah produk */
+["newName", "newStock", "newHpp", "newPrice"].forEach(id => {
+  $(id).addEventListener("keydown", event => {
+    if (event.key === "Enter") addProduct();
+  });
+});
+
+/* Mulai aplikasi */
+renderAll();
+</script>
+</body>
+</html>
